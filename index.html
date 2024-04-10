@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview</title>
+    <style>
+        body {
+            background: rgb(255, 247, 155);
+            background: linear-gradient(0deg, rgba(255, 247, 155, 1) 0%, rgb(163, 255, 247) 100%);
+        }
+
+        h1 {
+            text-align: center;
+            color: #640404;
+        }
+
+        h2 {
+            text-align: center;
+            color: #640404;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 400px;
+        }
+
+        #Product {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 1px #6b666b;
+            margin: 90px auto;
+            display: block;
+        }
+
+        .product-Images-Container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-image {
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid #640404;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Best Seller</h1>
+    <h2>Chh. Shivaji Maharaj Statues</h2>
+    <div class="container">
+        <div class="product-Images-Container">
+            <img src="1.jpeg" class="product-image" onclick="change('1.jpeg')" />
+            <img src="2.jpeg" class="product-image" onclick="change('2.jpeg')" />
+            <img src="3.jpeg" class="product-image" onclick="change('3.jpeg')" />
+            <img src="4.jpeg" class="product-image" onclick="change('4.jpeg')" />
+            <img src="5.jpeg" class="product-image" onclick="change('5.jpeg')" />
+            <img src="6.jpeg" class="product-image" onclick="change('6.jpeg')" />
+
+           
+        </div>
+        <div class="product">
+            <img src="1.jpeg" id="Product" />
+        </div>
+
+    </div>
+    <script>
+        function change(Name) {
+            const mainImg = document.getElementById('Product');
+            mainImg.src = Name;
+
+        }
+    </script>
+</body>
+
+</html>
